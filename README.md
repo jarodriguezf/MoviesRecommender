@@ -9,7 +9,9 @@ Todo se ha realizado con objetivos didacticos, por tanto, no estamos ante un sis
 
 ## Dataset 📄
 
-Este proyecto utiliza el conjunto de datos MovieLens proporcionado por GroupLens (https://grouplens.org/). Al utilizar este conjunto de datos, reconozco y acepto las condiciones de uso establecidas por GroupLens.
+Este proyecto utiliza el conjunto de datos MovieLens proporcionado por GroupLens (https://grouplens.org/).
+
+Al utilizar este conjunto de datos, reconozco y acepto las condiciones de uso establecidas por GroupLens.
 
 **Cita sugerida** ✒️
 
