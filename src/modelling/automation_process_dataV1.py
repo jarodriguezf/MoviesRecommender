@@ -3,8 +3,7 @@ import numpy as np
 from sklearn.impute import SimpleImputer
 from datetime import datetime
 
-# Almacena la ruta de los dataset correspondientes
-df_=''
+# Script de automatizacion de procesamiento de datos  de la version 1.0 (sistema de recomendacion)
 
 # Los valores nulos de df_ los modificaremos con el valor 0 y 'unknown'
 def imputer_(df_):
@@ -112,5 +111,3 @@ def united_functions(df_):
     df_=mainGenre_df_(df_) #Extraemos genero principal
     df_=valoration_df(df_)# Categorias en funcion de rating
     return df_
-
-df_processed = united_functions(df_)
