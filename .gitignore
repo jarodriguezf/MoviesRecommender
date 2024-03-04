@@ -2,3 +2,4 @@
 *.txt
 *.parquet
 *.drawio
+*.pyc
