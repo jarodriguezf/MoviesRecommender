@@ -35,6 +35,29 @@ def date_df_indepenDates(df_):
     df_ratings_copy.drop('date_rating', axis=1, inplace=True)
     return df_ratings_copy
 
+# Aleatoriamente modificamos 5 peliculas por usuario para simular que no la han visto.
+def poner_no_vistas(grupo):
+
+    # Número de películas a poner como no vistas
+    num_no_vistas = min(10, len(grupo['movieId'].unique()))
+    
+    if num_no_vistas < 10:
+        return grupo
+
+    # Selecciona aleatoriamente algunas películas para poner como no vistas
+    peliculas_no_vistas = np.random.choice(grupo['movieId'].unique(), size=num_no_vistas, replace=False)
+
+    # Actualiza el grupo
+    mask = grupo['movieId'].isin(peliculas_no_vistas)
+    grupo.loc[mask, ['rating', 'year_rate', 'month_rate' ,'day_rate']] = 0
+    
+    return grupo
+
+# Resetea el índice del DataFrame
+def reset_grupo_index(df_):
+    df_ = df_.reset_index(drop=True)
+    return df_
+
 # Transformamos las variables del dataset df_
 # title, Extraemos el año de publicacion de cada pelicula en una variable nueva
 def launchYear_title_df_(df_):
@@ -98,15 +121,32 @@ def drop_columns(df_):
 
 # Llamada que activa el procesamiento de todos los procesos
 def united_functions(df_):
-    df_= imputer_(df_)# llamada a funcion de limpieza de nulos 
+    print("Entrando a united_functions (script de procesamiento de datos)")
+    df_= imputer_(df_)# llamada a funcion de limpieza de nulos
+    print("-Imputer realizado con exito_")
     df_=timestamp_to_datetime_df_(df_) # Transforma timestamp a datetime (las fechas no valoradas se veran asi:"1970-01-01")
+    print("-Transformacion timestamp realizado con exito_")
     df_=date_df_indepenDates(df_)# Extraemos fechas independientes
+    print("-Extraccion fechas realizado con exito_")
+    df_=df_.groupby('userId').apply(poner_no_vistas)# Llamada a peliculas no vistas
+    print("-Transformas pelculas no vista realizado con exito_")
+    df_=reset_grupo_index(df_)# llamada a reset index
+    print("-Reseteo indice realizado con exito_")
     df_=launchYear_title_df_(df_) # Extrae año del titulo
+    print("-Extraccion año realizado con exito_")
     df_=int_userId_df_(df_)# Convierte userId a entero
+    print("-Casteo a entero realizado con exito_")
     df_=lenTitle_df_(df_) # Extraemos longitud del titulo
+    print("-Extraccion titulo realizado con exito_")
     df_=mainGenre_df_(df_) #Extraemos genero principal
+    print("-Extraccion genero principal realizado con exito_")
     df_=secundaryGenre_df_(df_)#Extraemos genero secundario
+    print("-Extraccion genero secundario realizado con exito_")
     df_=thirdGenre_df_(df_)#Extraemos genero terciario
+    print("-Extraccion genero terciario realizado con exito_")
     df_=valoration_df(df_)# Categorias en funcion de rating
+    print("-Extraccion valoracion rating realizado con exito_")
     df_=drop_columns(df_)#Eliminacion de 3 variables
+    print("-Eliminacion columnas innecesarias realizado con exito_")
+    print("--Fin del procesamiento de datos--")
     return df_
