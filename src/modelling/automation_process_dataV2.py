@@ -54,14 +54,6 @@ def normalizer(df_):
  
     return df_ratings_copy
 
-# Normalizamos valores numericos a rangos entre 0-1
-#def normalizer(df_):
-    df_ratings_copy = df_.copy()
-
-    scaler = MinMaxScaler()
-    df_ratings_copy[['launch_year']] = scaler.fit_transform(df_ratings_copy[['launch_year']])
-
-    return df_ratings_copy
 
 # Llamada que activa el procesamiento de todos los procesos
 def united_functions(df_):
@@ -83,7 +75,6 @@ def united_functions(df_):
     df_=encoder_genre(df_)# Codificacion categoricas genres
     df_=normalizer(df_)
     print('- Codificamos los generos y normalizamos para su correcto formato...')
-    #df_=normalizer(df_)# normalizacion numericos
     print('FIN DE PROCESAMIENTO DE DATOS')
 
     return df_, list_user_movie
