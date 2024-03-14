@@ -50,7 +50,7 @@ def normalizer(df_):
     df_ratings_copy = df_.copy()
 
     normalizer = MinMaxScaler()
-    df_ratings_copy[['launch_year', 'rating']] = normalizer.fit_transform(df_ratings_copy[['launch_year', 'rating']])
+    df_ratings_copy[['launch_year','rating']] = normalizer.fit_transform(df_ratings_copy[['launch_year','rating']])
  
     return df_ratings_copy
 
@@ -58,8 +58,6 @@ def normalizer(df_):
 # Llamada que activa el procesamiento de todos los procesos
 def united_functions(df_):
     print('INICIANDO PROCESAMIENTO DE DATOS...')
-    print('- procesando tags y fusionando datasets..')
-    #df_ = df_rating.merge(df_tag, how='right', on='movieId')
     df_=imputer_(df_)# Eliminamos los valores nulos
     print('- Eliminacion de nulos..')
     df_=drop_variables(df_)
