@@ -1,4 +1,7 @@
-﻿# MoviesRecommender
+<h1 align='center'>MoviesRecommender</h1>﻿
+
+![portada2](https://github.com/jarodriguezf/MoviesRecommender/assets/112967594/845045b7-ab93-4911-8ba8-afdbf8c038c3)
+
 
 *El proposito de este proyecto es replicar un sistema de recomendacion de peliculas a usuarios. 
 La idea de realizar dicho proyecto es la mejora y aprendizaje de nuevas areas del deep learning personalmente.
