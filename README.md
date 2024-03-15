@@ -58,7 +58,7 @@ Cada prediccion que hagamos tendremos que pasar por parametros a la app el id de
 **Observaciones:**
 - Podemos ver la cantidad de usuarios junto con sus peliculas vistas que queramos.
   
-![lista_usuarios](https://github.com/jarodriguezf/MoviesRecommender/assets/112967594/f0d5cd0b-2049-4b2b-a004-2917e67f299d)
+![list_users](https://github.com/jarodriguezf/MoviesRecommender/assets/112967594/b30761b7-253a-417d-a742-b6e8d05c2fcb)
 
 - Podemos tambien, mostrar las peliculas vistas por un usuario en concreto.
 
