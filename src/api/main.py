@@ -7,9 +7,10 @@ list_user_movies= pd.read_csv("../../data/raw/data_model/final_data_used/list_us
 # Diccionario de list_user_movies
 dicc_user_movies = {'userId':list_user_movies['userId'], 'movieId':list_user_movies['movieId'], 'title':list_user_movies['title']}
 
-# Buscar usuarios 
+# Buscar n usuarios 
 def find_nusers(number):      
     lista =list_user_movies.head(number)
+    lista.drop(['rating', 'title'], axis=1, inplace=True)
     return lista
 
 # Buscar items de usuario especifico
