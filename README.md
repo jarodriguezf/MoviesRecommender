@@ -52,24 +52,30 @@ Encontramos una amplia gama de usuarios, algunos han visto mas de una pelicula y
 
 Cada prediccion que hagamos tendremos que pasar por parametros a la app el id del usuario y el id de la pelicula.
 
-![inicio_movies](https://github.com/jarodriguezf/MoviesRecommender/assets/112967594/745c8183-fcc1-499e-acf9-45231e2d0b20)
+![portada](https://github.com/jarodriguezf/MoviesRecommender/assets/112967594/a8ddfaa7-b4f0-4374-b5fc-a9076a3cb45d)
+
 
 **Observaciones:**
 - Podemos ver la cantidad de usuarios junto con sus peliculas vistas que queramos.
   
-![mostrar_user](https://github.com/jarodriguezf/MoviesRecommender/assets/112967594/042520de-6271-4e32-8ea9-60ba68007737)
+![lista_usuarios](https://github.com/jarodriguezf/MoviesRecommender/assets/112967594/f0d5cd0b-2049-4b2b-a004-2917e67f299d)
+
+- Podemos tambien, mostrar las peliculas vistas por un usuario en concreto.
+
+![find_user_item](https://github.com/jarodriguezf/MoviesRecommender/assets/112967594/73c7106b-ec26-42ca-a774-f103b36099e3)
 
 - Si el usuario no ha visto una pelicula pasada por parametro, devolvera el error.
 
-![no_exist](https://github.com/jarodriguezf/MoviesRecommender/assets/112967594/e09d3718-7765-4476-a984-6457f942f736)
+![user_not_movie](https://github.com/jarodriguezf/MoviesRecommender/assets/112967594/77ab24f4-3fd8-4290-b94c-5d17d814dc38)
 
 - Si la pelicula no tiene una relevancia de mas de un 70% de similitud con otras peliculas, devolvera un error.
 
-![no_relevance](https://github.com/jarodriguezf/MoviesRecommender/assets/112967594/a1116591-7ec8-4145-8e9a-77737f8798d6)
+![relevancia_movie](https://github.com/jarodriguezf/MoviesRecommender/assets/112967594/7c598943-2a15-4ea2-849a-e58011cc59e6)
 
 - En el caso de que encontremos un usuario correcto para una pelicula y relevancia significativa, mostrara en orden descendente otras peliculas nuevas similares.
-  
-![recommender](https://github.com/jarodriguezf/MoviesRecommender/assets/112967594/e135cc66-dd34-47c7-bb38-242307a58ace)
+
+![recomendation](https://github.com/jarodriguezf/MoviesRecommender/assets/112967594/ff9338c7-c02d-4fd8-bd1c-7b6d9a6f183c)
+
 
 
 
