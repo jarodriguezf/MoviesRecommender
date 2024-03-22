@@ -40,7 +40,7 @@ No se afirma ni se implica ningún respaldo por parte de la Universidad de Minne
 - Python (pandas, sklearn,numpy, tensorflow/keras).
 - Librerias de visualizacion de datos (matplotlib, seaborn).
 - Streamlit (para desarrollo web).
-- Git (gitflow, como sistea de control de verisones).
+- Git (gitflow, como sistema de control de versiones).
 
 ## Funcionamiento de la App!! 🚀
 
